@@ -23,6 +23,8 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
 
 android {
     compileSdkVersion 34
@@ -43,6 +45,9 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+}
+flutter {
+    source '../..'
 }
 
 /*dependencies {
